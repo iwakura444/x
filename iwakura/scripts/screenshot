@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+dir="${HOME}/Pictures/Screenshots"
+mkdir -p "${dir}"
+
+timestamp="$(date +%Y-%m-%d_%H-%M-%S)"
+
+case "${1:-}" in
+  --area)
+    grim -g "$(slurp)" "${dir}/shot-${timestamp}.png"
+    ;;
+  --window)
+    grim -g "$(slurp -o)" "${dir}/shot-${timestamp}.png"
+    ;;
+  --full|"")
+    grim "${dir}/shot-${timestamp}.png"
+    ;;
+  *)
+    printf 'Usage: %s [--area|--window|--full]\n' "$0" >&2
+    exit 1
+    ;;
+esac
+

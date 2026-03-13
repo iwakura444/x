@@ -1,0 +1,5 @@
+configuration {
+  modi: "drun,run";
+  theme: "transparent-pink";
+}
+

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+case "${1:-}" in
+  up)
+    brightnessctl set +5%
+    ;;
+  down)
+    brightnessctl set 5%-
+    ;;
+  *)
+    printf 'Usage: %s {up|down}\n' "$0" >&2
+    exit 1
+    ;;
+esac
+

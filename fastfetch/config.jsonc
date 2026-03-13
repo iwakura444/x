@@ -1,0 +1,17 @@
+{
+  "logo": {
+    "type": "image",
+    "source": "~/assets/fetch.png",
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 2
+    }
+  },
+  "display": {
+    "separator": "  ",
+    "keyColor": "magenta",
+    "valueColor": "white"
+  }
+}
+
